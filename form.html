@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
   <title>Tugas Pemrograman Web 2 Hannan</title>
 </head>
 <style>
@@ -144,8 +143,19 @@
 
       <input type="submit" value="Daftar" style="width:100px">
       <input type="reset" value="Ulang" style="width:100px">
-
+    
+      <audio id="bg-music" preload="auto" loop>
+      <source src="mlbbmusic.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+      const audio = document.getElementById("bg-music");
+      audio.volume = 1.0;
+      document.body.addEventListener("click", function playMusic() {
+      audio.play();
+      document.body.removeEventListener("click", playMusic);
+      });
+      </script>
+    
   </form>
-
 </body>
 </html>
