@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas Pemrograman Web 2 Hannan</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(18, 44, 79) ;
+  }
+  fieldset {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  td {
+    background-color: #FFD166;
+    padding: 10px;
+  }
+  legend {
+    color: #FFD166;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  input[type="submit"], input[type="reset"] {
+  background-color: #FFD166;
+  color: navy;             
+  font-weight: bold;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+  background-color: orange;
+  transform: scale(1.05); 
+}
+</style>
+<body>
+
+  <marquee scrollamount="15"><h2 align="center"><font color="Gold">Tugas Pemrograman Web 2 Hannan</font></h2></marquee>
+
+  <form method="POST" action="#">
+
+    <!-- Bagian Akun -->
+
+    <fieldset style="width:700px">
+      <legend><b>Akun</b></legend>
+      <table>
+      <tr>
+          <td><label for="username">Username</label></td>
+          <td><input required type="text" id="username" name="username"></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td><input required type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+          <td><label for="confirmpass">Konfirmasi Password</label></td>
+          <td><input required type="password" id="confirmpass" name="confirmpass"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br>
+
+    <!-- Bagian Data -->
+    
+    <fieldset style="width:700px">
+      <legend><b>Data</b></legend>
+      <table>
+        <tr>
+          <td><label for="nama">Nama</label></td>
+          <td><input required type="text" id="nama" name="nama"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input required type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+          <td><label for="nomor telepon">Nomor Telepon</label></td>
+          <td><input required type="number" id="nomortelepon" name="nomortelepon"></td>
+        </tr>
+        <tr>
+          <td><label for="alamat">Alamat</label></td>
+          <td><input required type="text" id="alamat" name="alamat"></td>
+        </tr>
+        <tr>
+          <td><label for="tanggal">Tanggal Lahir</label></td>
+          <td><input required type="date" id="tanggal" name="tanggallahir"></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>
+            <input type="radio" id="pria" name="jk" value="Pria">
+            <label for="pria">Pria</label>
+            <input type="radio" id="perempuan" name="jk" value="Perempuan">
+            <label for="perempuan">Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+         <td>Informasi Yang Disukai</td>
+          <td>
+            <input type="checkbox" id="olahraga" name="info" value="Olahraga">
+            <label for="olahraga">Olahraga</label><br>
+            <input type="checkbox" id="travelling" name="info" value="Travelling">
+            <label for="travelling">Travelling</label><br>
+            <input type="checkbox" id="kesehatan" name="info" value="Kesehatan">
+            <label for="kesehatan">Kesehatan</label><br>
+            <input type="checkbox" id="main game" name="info" value="Main Game">
+            <label for="main game">Main Game</label>
+          </td>
+          <td>Program Studi</td>
+          <td>
+            <select id="prodi" name="prodi">
+              <option value="TI">Teknologi Informasi</option>
+              <option value="IK">Ilmu Komputer</option>
+              <option value="SI">Sistem Informasi</option>
+              <option value="MI">Manajemen Informatika</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset style="width:700px">
+        <legend><b>Opsional</b></legend>
+      <table>
+        <tr>
+          <td><label for="foto">Foto</label></td>
+          <td><input type="file" id="foto" name="foto"></td>
+        </tr>
+        <tr>
+          <td><label for="cerita">Cerita</label></td>
+          <td><textarea name="Cerita" placeholder="Ceritakan penyesalan kamu saat jadi maba"></textarea></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br>
+
+    <!-- Tombol -->
+
+      <input type="submit" value="Daftar" style="width:100px">
+      <input type="reset" value="Ulang" style="width:100px">
+
+  </form>
+
+</body>
+</html>
