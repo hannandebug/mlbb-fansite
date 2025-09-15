@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aritmatika Sederhana</title>
+    <style>
+        body {
+            background-color: #0c38b0;
+            height: 100vh; /* biar full tinggi layarnya */
+            font-family: Arial, sans-serif;
+            display: flex; /* untuk mengaktifkan flexbox */
+            justify-content: center; /* posisi horizontal di tengah */
+            align-items: center;     /* posisi vertikal di tengah */
+            text-align: center; /* biar judulnya di tengah */
+        }
+        table {
+            background-color: rgb(59, 246, 7);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        input[type="number"], input[type="text"], input[type="reset"] {
+            padding: 5px;
+            margin: 5px 0;
+            width: 150px;
+            border: 5px solid #0c38b0; /* untuk warna border biru seperti background */
+        }
+        button, input[type="reset"] {
+            background-color: yellow;
+            color: navy;             
+            font-weight: bold;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 2px;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover, input[type="reset"]:hover {
+            background-color: orange;
+            transform: scale(1.05); 
+        }
+    </style>
+    <script>
+        function proses(operator) {
+            let angka1 = parseFloat(document.getElementById("angka1").value);
+            let angka2 = parseFloat(document.getElementById("angka2").value);
+
+            if (isNaN(angka1) || isNaN(angka2)) {
+                alert("Harap mengisi bilangan dengan benar!");
+                return;
+            }
+
+            let hasil;
+            switch (operator) {
+                case "+": hasil = angka1 + angka2; break;
+                case "-": hasil = angka1 - angka2; break;
+                case "*": hasil = angka1 * angka2; break;
+                case "/":
+                    if (angka2 === 0) {
+                        alert("Pembagian dengan nol tidak diperbolehkan!");
+                        return;
+                    }
+                    hasil = angka1 / angka2;
+                    break;
+                default:
+                    alert("Operasi tidak dikenali!");
+                    return;
+            }
+
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><b>Input Bilangan 1</b></td>
+                <td><input type="number" id="angka1"></td>
+            </tr>
+            <tr>
+                <td><b>Input Bilangan 2</b></td>
+                <td><input type="number" id="angka2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" onclick="proses('+')">+</button>
+                    <button type="button" onclick="proses('-')">-</button>
+                    <button type="button" onclick="proses('*')">x</button>
+                    <button type="button" onclick="proses('/')">:</button>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Output</b></td>
+                <td><input type="text" id="hasil" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="100" align="center"><input type="reset" value="Ulang" style="width:100px"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
