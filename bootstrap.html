@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pemrograman Web 4 Hannan (Bootstrap)</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #0b1220, #14233a);
+    color: #f1f5f9;
+  }
+  .card-img-top {
+    height: 250px;   /* biar tinggi gambar tetap */
+    object-fit: cover; /* supaya gambar tidak gepeng */
+  }
+  .card {
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  h1 {
+    color: #FFD166;
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+  }
+  .card-title {
+    color: #FFD166;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<section>
+
+<!--INI NAVBAR YA PAK-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b style="color: #FFD166;">MLBB</b> Fansite</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <!-- Tombol Search -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- Menu navigasi (ms-auto itu untuk dorong ke kanan) -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="heroesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Heroes
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="heroesDropdown">
+            <li><a class="dropdown-item" href="#">Marksman</a></li>
+            <li><a class="dropdown-item" href="#">Assassin</a></li>
+            <li><a class="dropdown-item" href="#">Mage</a></li>
+            <li><a class="dropdown-item" href="#">Fighter</a></li>
+            <li><a class="dropdown-item" href="#">Tank</a></li>
+            <li><a class="dropdown-item" href="#">Support</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tier List</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Guides</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Media</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--INI HERO/HEADER YA PAK-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h1 style="font-family: Arial, sans-serif">Welcome<br/>to Mobile Legends: Bang Bang Fansite</h1>
+                <p class="mt-3 mb-4">Tempat berkumpulnya para player MLBB: berita, event, tips, dan komunitas!</p>
+
+                <!-- Tombol navigasi -->
+                <a class="btn btn-success" href="#" role="button">Register Account</a>
+                <a class="btn btn-primary" href="#" role="button">Heroes</a>
+                <a class="btn btn-danger" href="#" role="button">Guides</a>
+                <a class="btn btn-warning" href="#" role="button">Events</a>
+                <a class="btn btn-info" href="#" role="button">News</a>
+                <a class="btn btn-secondary" href="#" role="button">Community</a>
+            </div>
+
+             <!-- Gambar -->
+            <div class="col d-none d-md-block d-lg-block d-xl-block">
+                <img src="Logo MLBB.png" alt="" width="600px">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--INI CARD SECTION (3 KOLOM TAMBAHAN) YA PAK-->
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://i0.wp.com/esportsnesia.com/wp-content/uploads/2025/06/Build-Nolan-ML.jpg" class="card-img-top" alt="Hero Baru Nolan">
+        <div class="card-body">
+          <h5 class="card-title">Hero Baru: Nolan</h5>
+          <p class="card-text">Nolan hadir sebagai Assassin dengan kemampuan burst damage luar biasa. Siap jadi meta baru?</p>
+          <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://www.lapakgaming.com/blog/en-my/wp-content/uploads/2024/01/kof-2024.jpg" class="card-img-top" alt="Event MLBB">
+        <div class="card-body">
+          <h5 class="card-title">Event KOF Skin Gratis</h5>
+          <p class="card-text">Ikuti event terbaru MLBB untuk kesempatan mendapatkan skin KOF favoritmu secara gratis!</p>
+          <a href="#" class="btn btn-primary">Lihat Event</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://blog.gamensia.com/wp-content/uploads/2023/12/rank-mythical-immortal-mobile-legend.webp" class="card-img-top" alt="Tips Push Rank">
+        <div class="card-body">
+          <h5 class="card-title">Tips Push Rank Cepat</h5>
+          <p class="card-text">Gunakan hero meta, pahami role, dan main bareng tim untuk capai Mythical Immortal lebih cepat!</p>
+          <a href="#" class="btn btn-primary">Baca Tips</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <audio id="bg-music" preload="auto" loop>
+            <source src="mlbbmusic.mp3" type="audio/mpeg">
+            </audio>
+            <script>
+    const audio = document.getElementById("bg-music");
+    audio.volume = 1.0;
+    document.body.addEventListener("click", function playMusic() {
+    audio.play();
+    document.body.removeEventListener("click", playMusic);
+    });
+            </script>
+            </footer>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
